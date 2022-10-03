@@ -63,7 +63,7 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/LemontechSA/design-system-docs",
+            href: "https://github.com/LemontechSA/design-system",
             label: "GitHub",
             position: "right",
           },
