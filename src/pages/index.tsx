@@ -32,6 +32,18 @@ export default function Home(): JSX.Element {
     <Layout description="Lemontech Design System">
       <HomepageHeader />
       <main>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            padding: 28,
+            fontWeight: "bold",
+            fontStyle: "italic",
+            fontSize: 20,
+          }}
+        >
+          Sitio en contrucción...
+        </div>
         <HomepageFeatures />
       </main>
     </Layout>

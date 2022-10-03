@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-var-requires */
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
@@ -76,7 +78,7 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
+                label: "Get Started",
                 to: "/docs/intro",
               },
             ],
@@ -85,16 +87,16 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                label: "Instagram",
+                href: "https://www.instagram.com/lemontech_latam/?hl=es",
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                href: "https://twitter.com/lemontechlatam?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+              },
+              {
+                label: "Linkedin",
+                href: "https://cl.linkedin.com/company/lemontech",
               },
             ],
           },
@@ -102,12 +104,16 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
+                label: "Blogs",
                 to: "/blog",
               },
               {
+                label: "Lemontech",
+                href: "https://www.lemontech.com/",
+              },
+              {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/LemontechSA/design-system",
               },
             ],
           },

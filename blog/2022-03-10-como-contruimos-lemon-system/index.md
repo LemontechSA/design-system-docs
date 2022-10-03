@@ -13,7 +13,7 @@ Para definir y desarrollar la librería UI de React de Lemon System hemos tomado
 
 # Requerimientos
 
-Los requerimientos planteados para la librería UI del Design System de Lemontech son los siguientes:
+Los siguientes requerimientos fueron planteados para la librería UI del Design System de Lemontech:
 
 - Debe ser consistente con el Design System.
 - Debe ser facilmente adaptable en los equipos de Lemontech, considerando la conformación de estos en su mayoría por ingenieros Full-Stacks.
@@ -23,10 +23,17 @@ Los requerimientos planteados para la librería UI del Design System de Lemontec
 
 ## Estilos
 
-Dos formas de hacerlo
+Dos formas de implementar la estilización de los componentes
 
 - Style Props (style-system, xstyled, theme-ui)
 - Tailwind como css-in-js (twind, twin.macro)
+
+Si bien la opción de Style Props es comun en el mundo de las librerías de componentes de Javascript, quisimos optar por la segunda opción de css-in-js con la librería twind para permitir estilizar los componentes con Tailwind. 
+
+Al probar prototipos con Style Props nos dimos cuenta que, si bien, es una forma común de hacer librerías, sorpresivamente, no hay una librería en al comunidad que permita implementarlo facilmente, eso y que además involucraría un gran cambio en la forma de estilizar componentes por parte de los equipos internos de Lemontech nos hicieron decantarnos por la segunda opción.
+
+El hacer una librería basada en Tailwind con twind, es una forma novedosa de hacer una librería de UI, pero estabamos seguros de que iba a ser mejor recibida y por lo mismo iba a hacer más facilmente adoptable por parte de los equipos internos de Lemontech ya que, en su mayoría, estan familiarizados con el trabajar con Tailwind.
+
 
 ## Definición de Bundle
 
