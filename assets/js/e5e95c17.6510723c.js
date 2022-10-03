@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklemon_system_docs=self.webpackChunklemon_system_docs||[]).push([[6502],{7698:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"/design-system-docs/blog/tags/docusaurus","allTagsPath":"/design-system-docs/blog/tags","count":4}')}}]);

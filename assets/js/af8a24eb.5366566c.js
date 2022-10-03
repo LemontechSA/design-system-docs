@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklemon_system_docs=self.webpackChunklemon_system_docs||[]).push([[9104],{8075:s=>{s.exports=JSON.parse('{"permalink":"/design-system-docs/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
