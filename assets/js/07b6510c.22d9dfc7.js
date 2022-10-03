@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklemon_system_docs=self.webpackChunklemon_system_docs||[]).push([[9879],{4394:s=>{s.exports=JSON.parse('{"label":"facebook","permalink":"/design-system-docs/blog/tags/facebook","allTagsPath":"/design-system-docs/blog/tags","count":1}')}}]);
