@@ -8,8 +8,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Lemon System",
   tagline: "Design System for lawyers",
-  url: "https://lemontechsa.github.io/design-system-docs",
-  baseUrl: "https://lemontechsa.github.io/design-system-docs/",
+  url: "https://lemontechsa.github.io",
+  baseUrl: "design-system-docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
