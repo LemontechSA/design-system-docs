@@ -14,7 +14,6 @@ npm install lemon-system
 
 Implementar el ThemeProvider en el archivo root de la aplicación de React:
 
-
 ```jsx
 // index.js
 
@@ -23,5 +22,5 @@ ReactDOM.render(
     <App />
   </ThemeProvider>,
   document.getElementById("root")
-)
+);
 ```
