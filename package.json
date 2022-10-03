@@ -13,11 +13,13 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "lint": "eslint src",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "tsx,ts,jsx,js": "npm run lint"
+    "*.{ts,tsx,js,jsx}": [
+      "eslint",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@docusaurus/core": "2.1.0",
