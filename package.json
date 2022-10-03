@@ -17,7 +17,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*": "npm run lint"
+    "tsx,ts,jsx,js": "npm run lint"
   },
   "dependencies": {
     "@docusaurus/core": "2.1.0",
