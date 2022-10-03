@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
+import EasyToUser from "@site/static/img/undraw_docusaurus_mountain.svg";
 
 type FeatureItem = {
   title: string;
@@ -11,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "Easy to Use",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    Svg: EasyToUser,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
