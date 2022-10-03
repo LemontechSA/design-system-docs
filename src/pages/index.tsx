@@ -32,7 +32,6 @@ export default function Home(): JSX.Element {
     <Layout description="Lemontech Design System">
       <HomepageHeader />
       <main>
-        prueba
         <HomepageFeatures />
       </main>
     </Layout>
