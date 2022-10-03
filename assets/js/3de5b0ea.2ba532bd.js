@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklemon_system_docs=self.webpackChunklemon_system_docs||[]).push([[1998],{9563:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"https://lemontechsa.github.io/design-system-docs/blog/tags/docusaurus","allTagsPath":"https://lemontechsa.github.io/design-system-docs/blog/tags","count":4}')}}]);

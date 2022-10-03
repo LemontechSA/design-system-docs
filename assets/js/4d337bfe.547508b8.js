@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklemon_system_docs=self.webpackChunklemon_system_docs||[]).push([[2481],{1494:s=>{s.exports=JSON.parse('{"permalink":"https://lemontechsa.github.io/design-system-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

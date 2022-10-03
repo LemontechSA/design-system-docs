@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklemon_system_docs=self.webpackChunklemon_system_docs||[]).push([[8306],{972:s=>{s.exports=JSON.parse('{"label":"facebook","permalink":"https://lemontechsa.github.io/design-system-docs/blog/tags/facebook","allTagsPath":"https://lemontechsa.github.io/design-system-docs/blog/tags","count":1}')}}]);
