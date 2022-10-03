@@ -9,10 +9,24 @@ sidebar_position: 1
 Instalar la librería en el proyecto:
 
 ```bash
-npm install lemon-system
+npm install lemon-system@next
 ```
 
-Implementar el ThemeProvider en el archivo root de la aplicación de React:
+o si utilizas yarn:
+
+```bash
+yarn add lemon-system@next
+```
+
+## Provider
+
+Importar ThemeProvider y ponerlo lo más arriba en el arbol de React:
+
+```jsx
+import { ThemeProvider } from "lemon-system"
+```
+
+En aplicaciones **React**:
 
 ```jsx
 // index.js
@@ -23,4 +37,18 @@ ReactDOM.render(
   </ThemeProvider>,
   document.getElementById("root")
 );
+```
+
+En caso de ser una aplicación **Next.js**:
+
+```jsx
+// pages/_app.js
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <ThemeProvider>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+}
 ```
