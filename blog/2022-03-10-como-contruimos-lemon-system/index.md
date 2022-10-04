@@ -48,6 +48,7 @@ Webpack es la solución más comun actualmente para las aplicaciones web, lo usa
 
 Rollup y Esbuild son dos soluciones más contemporaneas que webpack, ambas su implementación son más sencillas y directas, sin embargo, por lejos la eficiencia en el tiempo de empaquetado que nos da Esbuild que por detras usa Rust es un   
 
+![Esbuild comparation](./esbuild-comparation.png)
 
 ## Administrador de paquetes
 
