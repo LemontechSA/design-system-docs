@@ -15,13 +15,6 @@
     "typecheck": "tsc",
     "prepare": "husky install"
   },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx,json,svg}": [
-      "eslint",
-      "prettier --write",
-      "git add"
-    ]
-  },
   "dependencies": {
     "@docusaurus/core": "2.1.0",
     "@docusaurus/preset-classic": "2.1.0",
