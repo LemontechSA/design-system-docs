@@ -17,22 +17,43 @@ Los siguientes requerimientos fueron planteados para Lemon System:
 
 - Debe ser consistente con el Design System de Lemontech.
 - Debe ser facilmente adaptable en los equipos de Lemontech, considerando la conformación de estos en su mayoría por ingenieros Full-Stacks.
-- No debe crear mayores inconvenientes al implementarla en nuevas o en aplicaciones ya creadas.
+- No debe crear mayores inconvenientes al ser implemenado en nuevas o ya creadas aplicaciones.
 
 # Decisiones de implementación 
 
-## Estilos
+## Enfoque
 
-Investigamos dos formas viables de implementar la estilización de los componentes:
+![Esbuild comparation](./ui-libraries.png)
+*Clasificación de Librerías más populares de UI.*
 
-- Style Props (style-system, xstyled, theme-ui)
-- Tailwind como css-in-js (twind, twin.macro)
+Existen variados enfoques para definir una librería de interfaces, las cuales las podemos dividir en tres grandes grupos: Las librerías que entregan un CSS potenciado con nuevas funcionalidades (CSS++), librerías que solamente brindan estilos a los componentes (Style Systems) y librerías que ofrecen un manejo del comportamiento de los componentes (Behavior Libraries).
 
-Si bien la opción de Style Props es comun en las librerías de componentes de Javascript, quisimos optar por la opción de css-in-js usando Twind para permitir a los desarrolladores estilizar los componentes con Tailwind mediante clases. 
+La necesidad principales que se quería cubrir era la de acelerar los desarrollos internos y crear una forma de que estos sean consistentes con el Design System de Lemontech en las diferentes aplicaciones que se desarrollasen, por esto, la mejor opción era optar por una librería que cubriese las 3 categorías mencionadas, tal como lo hace [MUI](https://mui.com), la librería UI de React de Google, que brinda tanto nuevas opciones de implementación de CSS, estilos por defecto y un ya implementado comportamiento para los componentes de la librería. 
 
-Al probar prototipos con diferentes librerías de Style Props nos dimos cuenta que, si bien, es una forma común de hacer librerías, sorpresivamente, no hay librería en al comunidad open source que permita implementarlo facilmente, eso y que además involucraría que los equipos tuviesen que tener un mayor conocimiento en CSS es por lo cual nos decantamos por la opción de estilizar como Tailwind.
+![Esbuild comparation](./librarie-subcategories.png)
+*Sub-categorias de librerías.*
 
-El hacer una librería basada en Tailwind con Twind, es una forma novedosa e interesante de hacer una librería de UI ya que permitiría a los usuarios estilizar los componentes de Lemon System tal como si hubiesen instalado Tailwind en sus aplicaciones y estuviesen estilizando sus propios componentes haciendo que tuviese un mejor recibimiento por parte de los desarrolladores internos y una mejor familiarización por parte de los equipos que ya usan Tailwind en sus aplicaciones frontends.
+Una de los puntos a considerar para que la librería fuese facilmente adoptada era que su estilización no fuese dificil y preferiblemente que no se tuviese que crear CSS StyleSheets sino que fuese simplemente con clases de Tailwind CSS, que era algo que en ciertos equipos ya estaban acostumbrados y les facilitiba el desarrollo.
+
+En las librerías investigadas: Chakra UI, MUI y Mantine. La estilización es mediante estilos como propiedad (Style Props) usando/inspirandose en librerías como [Styled System](https://styled-system.com) y [Theme UI](https://theme-ui.com)
+
+![Esbuild comparation](./code-comparation.png)
+*Sub-categorias de librerías.*
+
+Este enfoque de crear una librería la cual, aparte de brindar estilos y comportamiento, se pudiese estilizar con Tailwind CSS es novedoso y no teniamos presedentes en los cuales inspirarnos, por lo cual hicimos una investigación al respecto para probar su factibilidad técnica.
+
+- Tailwind CSS
+- Twin.macro
+- Twind
+
+Lo primero que se puede pensar es: ¿por qué no usar simplemente Tailwind CSS?. Es una pregunta totalmente valida pero que lastitamente resulta dificil el implementarlo. 
+
+[Tailwind CSS](https://tailwindcss.com) en una aplicación de React funciona con el post-procesador de CSS llamado [Autoprefixer](https://autoprefixer.github.io). Juntos pueden inyectar css a un fichero CSS StyleSheet con las clases de Tailwind CSS que son usadas en la app.
+
+La principal complicación técnica que tiene el implementar Tailwind CSS en la librería directamente es que es imperioso para Tailwind inyectar CSS en un CSS StyleSheet ya que este trabaja con un postCSS. Por lo que este proceso ya no se le puede encargar a la librería sino que la responsabilidad de configurar Tailwind CSS es traspasada al que implementa la librería en su aplicación, y lo mismo con respecto a su configuración que dependería del framework que este ocupando (create-react-app, Next.js, Vite, etc...). 
+
+Además de...
+
 
 ## Definición de Bundle
 

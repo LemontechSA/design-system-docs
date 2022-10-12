@@ -2,7 +2,7 @@ import React from "react";
 import { ThemeProvider } from "lemon-system";
 
 interface RootProps {
-  children: JSX.Element;
+  children: React.ReactElement;
 }
 
 export default function Root({ children }: RootProps) {
