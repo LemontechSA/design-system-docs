@@ -6,5 +6,5 @@ interface RootProps {
 }
 
 export default function Root({ children }: RootProps) {
-  return <ThemeProvider>{children}</ThemeProvider>;
+  return <ThemeProvider resetCSS={false}>{children}</ThemeProvider>;
 }
