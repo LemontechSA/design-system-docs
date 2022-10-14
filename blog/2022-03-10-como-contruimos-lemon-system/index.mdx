@@ -4,8 +4,13 @@ title: ¿Cómo contruimos Lemon System?
 authors: [jose, renzo]
 ---
 
+import { Box } from "lemon-system";
 import UI_LIBRARIES_IMAGE from "./ui-libraries.png";
 import LIBRARY_SUB_CATEGORIES_IMAGE from "./librarie-subcategories.png";
+import CODE_COMPARATION_IMAGE from "./code-comparation.png";
+import ESBUILD_COMPARATION_IMAGE from "./esbuild-comparation.png";
+import TWIND_TWIN_COMPARATION_IMAGE from "./twind-twin-comparation.png";
+import PACKAGE_COMPARATION_IMAGE from "./packages-comparation.png";
 
 Para el desarrollo de Lemon System, la librería UI del design system de Lemontech, hemos tomado diferentes decisiones con respecto a implementaciones técnicas. En este blog planteamos las diferentes dificultades técnicas a las que nos hemos vistos enfrentados y el cómo optamos por solucionarlas.
 
@@ -27,6 +32,7 @@ Los siguientes requerimientos fueron planteados para Lemon System:
 
 <br />
 
+<Box className="flex flex-col items-center">
 <img
   src={UI_LIBRARIES_IMAGE}
   width="600"
@@ -34,6 +40,8 @@ Los siguientes requerimientos fueron planteados para Lemon System:
 />
 
 _Clasificación de Librerías más populares de UI._
+
+</Box>
 
 <br />
 
@@ -43,6 +51,8 @@ La necesidad principales que se quería cubrir con Lemon System era la de aceler
 
 <br />
 
+<Box className="flex flex-col items-center">
+
 <img
   src={LIBRARY_SUB_CATEGORIES_IMAGE}
   width="400"
@@ -51,14 +61,27 @@ La necesidad principales que se quería cubrir con Lemon System era la de aceler
 
 _Sub-categorias de librerías._
 
+</Box>
+
 <br />
 
 Para que la librería fuese facilmente adoptable era necesario que su estilización no fuese compleja y preferiblemente que no se tuviese que crear CSS StyleSheets para esto sino que fuese simplemente con clases de Tailwind CSS, que era algo, que en ciertos equipos, ya estaba siendo aplicado y les facilitiba el desarrollo.
 
 En Chakra UI, MUI y Mantine la estilización es mediante estilos como propiedad (Style Props) o usando la convención xs, usando e inspirandose en librerías como [Styled System](https://styled-system.com) y [Theme UI](https://theme-ui.com).
 
-![Sub-categorias de librerías](./code-comparation.png)
-_Sub-categorias de librerías._
+<br />
+
+<Box className="flex flex-col items-center">
+
+<img
+  src={CODE_COMPARATION_IMAGE}
+  width="500"
+  alt="Las 3 formas de estilizar un componente."
+/>
+
+</Box>
+
+<br />
 
 Este enfoque de crear una librería la cual, aparte de brindar estilos y comportamiento, se pudiese estilizar con Tailwind CSS es novedoso y no teniamos presedentes en los cuales inspirarnos, por lo cual hicimos una investigación al respecto para probar su factibilidad técnica probando las tres siguientes opciones:
 
@@ -78,8 +101,21 @@ Otro punto a considerar es en el ambiente desarrollo, en este, para que fuese po
 
 El conjunto de estas problematicos nos hizo decantarnos por las opciones de Tailwind css-in-js como Twind y Twin.macro.
 
-![Esbuild comparation](./twind-twin-comparation.png)
+<br />
+
+<Box className="flex flex-col items-center">
+
+<img
+  src={TWIND_TWIN_COMPARATION_IMAGE}
+  width="600"
+  alt="Comparación entre Twin.macro y Twind"
+/>
+
 _Comparación entre Twin.macro y Twind._
+
+</Box>
+
+<br />
 
 Twin.macro es una librería que funciona con una [Macro](https://github.com/kentcdodds/babel-plugin-macros) de Babel que permite estilizar componentes css-in-js usando clases de Tailwdin CSS, esta transformación es hecha en la compilación.
 
@@ -104,6 +140,18 @@ import { Button } from "lemon-system";
 
 ## Definición de Bundle
 
+<br />
+
+<Box className="flex flex-col items-center">
+
+<img src={ESBUILD_COMPARATION_IMAGE} width="600" alt="ESBuild benchmark" />
+
+_Benchmark https://esbuild.github.io_
+
+</Box>
+
+<br />
+
 Para empaquetar el codigo fuente y poder distribuir la librería en npm teniamos diferentes opciones:
 
 - Webpack
@@ -116,10 +164,19 @@ Webpack es la solución más comun actualmente para las aplicaciones web, lo usa
 
 Rollup y Esbuild son dos soluciones más contemporaneas que webpack, en ambas su implementación es más sencilla y directa, sin embargo, por lejos, era mucho mayor la eficiencia en el tiempo de empaquetado que nos daba Esbuild, que por detras usa el lenguaje Go y compila a lenguaje maquina.
 
-![Esbuild comparation](./esbuild-comparation.png)
-_Benchmark https://esbuild.github.io_
-
 ## Administrador de paquetes
+
+<br />
+
+<Box className="flex flex-col items-center">
+
+<img src={PACKAGE_COMPARATION_IMAGE} width="600" alt="Packages benchmark" />
+
+_Benchmark https://pnpm.io/benchmarks._
+
+</Box>
+
+<br />
 
 Como administrador de librerías se tomaron en cuenta las siguientes:
 
@@ -132,9 +189,6 @@ Uno de los principios técnicos por lo que nos guiamos para la contrucción de L
 Con respecto a Yarn, si bien, tiempo atras, era optada por usarse en vez de npm debido a que era más eficiente como administrador de paquetes, actualmente no hay gran diferencía entre estas, y sumandole el hecho de que yarn sea algo externo a Node y no viniese con este instalado como si lo hace npm es por lo cual que lo descartamos.
 
 Pnpm nos ofrecia una mayor eficiencia que npm, pero decidimos optar por esta ultima sin embargo, esto debido a que con pnpm nos encontramos con problemas de compatibilidad con otras librerías debido a su forma de organizar _node_modules_.
-
-![Esbuild comparation](./packages-comparation.png)
-_Benchmark https://pnpm.io/benchmarks_
 
 ## Repositorio
 
