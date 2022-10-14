@@ -8,7 +8,7 @@ import { Code } from "lemon-system"
 
 ## Installation
 
-Install Lemon System:
+With npm:
 
 ```bash
 npm install lemon-system@next
@@ -22,7 +22,7 @@ yarn add lemon-system@next
 
 ## Provider
 
-Import <Code>ThemeProvider</Code> and put it as high as possible in the React tree:
+Import <Code>ThemeProvider</Code> and put it as high as possible in the React root file:
 
 ```jsx
 import { ThemeProvider } from "lemon-system"
@@ -57,7 +57,7 @@ export default function MyApp({ Component, pageProps }) {
 
 ## CSS Baseline
 
-The CSS Baseline can be deactivated:
+Optionally you can disable CSS Baseline:
 
 ```jsx
 <ThemeProvider resetCSS={false}>
