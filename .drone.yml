@@ -19,6 +19,20 @@ steps:
     depends_on:
       - install
 
+  - name: lint
+    image: node:16-alpine
+    commands:
+      - npm run lint
+    depends_on:
+      - install
+
+  - name: code-style
+    image: node:16-alpine
+    commands:
+      - npm run code-style
+    depends_on:
+      - install
+
   - name: slack
     image: plugins/slack
     settings:
@@ -51,20 +65,21 @@ steps:
         *Status*: {{ build.status }}
 
         *Link*: {{ build.link }}
-  
+
     when:
-      status: 
+      status:
         - success
         - failure
-      event: 
+      event:
         - push
         - pull_request
     depends_on:
-      - build
+      - lint
+      - code-style
 
 trigger:
   branch:
-      - master
+    - master
   event:
-  - pull_request
-  - push 
+    - pull_request
+    - push

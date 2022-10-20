@@ -25,7 +25,7 @@ yarn add lemon-system@next
 Import <Code>ThemeProvider</Code> and put it as high as possible in the React root file:
 
 ```jsx
-import { ThemeProvider } from "lemon-system"
+import { ThemeProvider } from "lemon-system";
 ```
 
 In apps that use **React**:
@@ -60,7 +60,5 @@ export default function MyApp({ Component, pageProps }) {
 Optionally you can disable CSS Baseline:
 
 ```jsx
-<ThemeProvider resetCSS={false}>
-  ...
-</ThemeProvider>
+<ThemeProvider resetCSS={false}>...</ThemeProvider>
 ```
