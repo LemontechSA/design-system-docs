@@ -15,13 +15,42 @@ import { Dialog } from "lemon-system";
 
 ## Usage
 
-import { Dialog } from "lemon-system";
+import { useState } from "react";
+import { Button, Dialog, useDisclosure } from "lemon-system";
 
-<Dialog>Dialog</Dialog>
+export const DialogExample = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <>
+      <Button onClick={onOpen}>Open Dialog</Button>
+      <Dialog isOpen={isOpen} onClose={onClose}>
+        <Dialog.Overlay />
+        <Dialog.Content>
+          <Dialog.Header>Dialog Header</Dialog.Header>
+          <Dialog.Body>Dialog Body</Dialog.Body>
+          <Dialog.Footer>
+            <Button onClick={onClose}>Close</Button>
+          </Dialog.Footer>
+        </Dialog.Content>
+      </Dialog>
+    </>
+  );
+};
+
+<DialogExample />
 
 <br />
 <br />
 
 ```jsx
-<Dialog>Dialog</Dialog>
+<Dialog isOpen={isOpen} onClose={onClose}>
+  <Dialog.Overlay />
+  <Dialog.Content>
+    <Dialog.Header>Dialog Header</Dialog.Header>
+    <Dialog.Body>Dialog Body</Dialog.Body>
+    <Dialog.Footer>
+      <Button onClick={onClose}>Close</Button>
+    </Dialog.Footer>
+  </Dialog.Content>
+</Dialog>
 ```

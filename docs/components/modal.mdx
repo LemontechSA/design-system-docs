@@ -7,6 +7,9 @@ description:
   form, opening a Modal, canceling an action, or performing a delete operation.
 ---
 
+import { useState } from "react";
+import { Button, Modal } from "lemon-system";
+
 ## Import
 
 ```js
@@ -15,13 +18,41 @@ import { Modal } from "lemon-system";
 
 ## Usage
 
-import { Modal } from "lemon-system";
+export const BasicUsage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <Modal.Header>Modal Header</Modal.Header>
+        <Modal.Body>Modal Body</Modal.Body>
+        <Modal.Footer>
+          <Button onClick={() => setIsOpen(false)}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+};
 
-<Modal>Modal</Modal>
+<BasicUsage />
 
 <br />
 <br />
 
 ```jsx
-<Modal>Modal</Modal>
+export const BasicUsage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <Modal.Header>Modal Header</Modal.Header>
+        <Modal.Body>Modal Body</Modal.Body>
+        <Modal.Footer>
+          <Button onClick={() => setIsOpen(false)}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+};
 ```
