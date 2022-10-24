@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksuit_ui_docs=self.webpackChunksuit_ui_docs||[]).push([[535],{5641:s=>{s.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\xbfC\xf3mo contruimos Lemon System?","permalink":"/design-system-docs/blog/how-we-built-it"}]}')}}]);
