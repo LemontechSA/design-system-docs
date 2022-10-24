@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lemontechsa.github.io/suit-ui-docs/blog</id>
-    <title>Lemon System Blog</title>
+    <title>Suit UI Blog</title>
     <updated>2022-03-10T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lemontechsa.github.io/suit-ui-docs/blog"/>
-    <subtitle>Lemon System Blog</subtitle>
+    <subtitle>Suit UI Blog</subtitle>
     <icon>https://lemontechsa.github.io/suit-ui-docs/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[¿Cómo contruimos Suit UI?]]></title>
