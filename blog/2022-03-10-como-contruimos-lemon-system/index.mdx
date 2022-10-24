@@ -1,6 +1,6 @@
 ---
 slug: how-we-built-it
-title: ¿Cómo contruimos Lemon System?
+title: ¿Cómo contruimos Suit UI?
 authors: [jose, renzo]
 ---
 
@@ -14,19 +14,19 @@ import PACKAGE_COMPARATION_IMAGE from "./packages-comparation.png";
 
 <br />
 
-Para el desarrollo de **Lemon System**, la librería UI del Design System de [Lemontech](https://www.lemontech.com), hemos tomado diferentes decisiones con respecto a implementaciones técnicas. En este blog planteamos las diferentes dificultades técnicas a las que nos hemos vistos enfrentados y el cómo optamos por solucionarlas.
+Para el desarrollo de **Suit UI**, la librería de componentes del Design System de [Lemontech](https://www.lemontech.com), hemos tomado diferentes decisiones con respecto a implementaciones técnicas. En este blog planteamos las diferentes dificultades técnicas a las que nos hemos vistos enfrentados y el cómo optamos por solucionarlas.
 
 <!--truncate-->
 
 <br />
 
-> 🚧 Lemon System sigue en desarrollo, debido a esto puede que algunos elementos escritos aquí con el tiempo cambien o esten desactualizados.
+> 🚧 Suit UI sigue en desarrollo, debido a esto puede que algunos elementos escritos aquí con el tiempo cambien o esten desactualizados.
 
 <br />
 
 # Requerimientos
 
-Los siguientes requerimientos fueron planteados para Lemon System:
+Los siguientes requerimientos fueron planteados para Suit UI:
 
 - Debe ser consistente con el Design System de Lemontech.
 - Debe ser facilmente adaptable en los equipos de Lemontech.
@@ -53,7 +53,7 @@ _Categorias de Librerías UI._
 
 Existen variados enfoques para definir una librería de interfaces, las cuales podemos dividir en tres grandes categorías: **CSS++** (Librerías que solo entregan un CSS potenciado), **Style Systems** (librerías que solamente brindan estilos) y **Behavior Libraries** (librerías que solo ofrecen un manejo del comportamiento). También existen librerías que estan entre las intersecciones de estas categorías y que añaden un conjunto de funcionalidades.
 
-La mejor opción para que Lemon System tuviese una consistencia con el Design System y que además brindará una mejor [experiencia de desarrollo (DX)](https://medium.com/swlh/what-is-dx-developer-experience-401a0e44a9d9) y, por lo mismo, una mejor adaptabilidad era optar por desarrollar la librería cubriendo las 3 categorías mencionadas, tal como lo hacen [MUI](https://mui.com), [Chakra UI](https://chakra-ui.com) y [Mantine](https://mantine.dev).
+La mejor opción para que Suit UI tuviese una consistencia con el Design System y que además brindará una mejor [experiencia de desarrollo (DX)](https://medium.com/swlh/what-is-dx-developer-experience-401a0e44a9d9) y, por lo mismo, una mejor adaptabilidad era optar por desarrollar la librería cubriendo las 3 categorías mencionadas, tal como lo hacen [MUI](https://mui.com), [Chakra UI](https://chakra-ui.com) y [Mantine](https://mantine.dev).
 
 <br />
 
@@ -89,19 +89,19 @@ En Chakra UI, MUI y Mantine la estilización es mediante **Style Props** (estilo
 
 <br />
 
-Este enfoque de crear una librería la cual, aparte de brindar estilos y comportamiento, se pudiese estilizar con Tailwind CSS es novedoso y no teniamos presedentes en los cuales inspirarnos, por lo cual investigamos su factibilidad técnica probando usar las tres siguientes opciones como librería base de Lemon System:
+Este enfoque de crear una librería la cual, aparte de brindar estilos y comportamiento, se pudiese estilizar con Tailwind CSS es novedoso y no teniamos presedentes en los cuales inspirarnos, por lo cual investigamos su factibilidad técnica probando usar las tres siguientes opciones como librería base de Suit UI:
 
 - [Tailwind CSS](https://tailwindcss.com)
 - [Twin.macro](https://github.com/ben-rogerson/twin.macro)
 - [Twind](https://twind.dev)
 
-Lo primero que se puede pensar es: ¿por qué no usar simplemente Tailwind CSS en Lemon System? Y, en verdad, sería la opción ideal pero que lastimamente no es algo factible de hacer.
+Lo primero que se puede pensar es: ¿por qué no usar simplemente Tailwind CSS en Suit UI? Y, en verdad, sería la opción ideal pero que lastimamente no es algo factible de hacer.
 
 Tailwind CSS en una aplicación de React funciona con los post-procesador de CSS: [Autoprefixer](https://autoprefixer.github.io) y [PurgeCSS](https://purgecss.com), estos en conjunto pueden inyectar CSS a un fichero CSS StyleSheet para estilizar los componentes con clases de Tailwind CSS.
 
-La principal complicación técnica que tiene el implementar Tailwind CSS en la librería directamente es que es imperioso para Tailwind inyectar CSS en un CSS StyleSheet y debido a este proceso es que ya no se le podría encargar a Lemon System la responsabilidad de configurar Tailwind CSS sino que esta es traspasada al que implementa la librería en su aplicación, y lo mismo pasaría con respecto a su configuración, que dependería del framework que esté ocupando (create-react-app, Next.js, Vite, etc...).
+La principal complicación técnica que tiene el implementar Tailwind CSS en la librería directamente es que es imperioso para Tailwind inyectar CSS en un CSS StyleSheet y debido a este proceso es que ya no se le podría encargar a Suit UI la responsabilidad de configurar Tailwind CSS sino que esta es traspasada al que implementa la librería en su aplicación, y lo mismo pasaría con respecto a su configuración, que dependería del framework que esté ocupando (create-react-app, Next.js, Vite, etc...).
 
-Otro punto a considerar es en el ambiente desarrollo de Lemon System, en este, para que fuese posible desarrollar con Tailwind CSS se tendría que implementar una configuración en la empaquetación del código fuente para poder userse junto con Storybook, luego, crear otra configuración en la empaquetación para el bundle que sería distribuido en npm y, por último, se tendría que tener en cuenta también el purge al implementar la librería en alguna app.
+Otro punto a considerar es en el ambiente desarrollo de Suit UI, en este, para que fuese posible desarrollar con Tailwind CSS se tendría que implementar una configuración en la empaquetación del código fuente para poder userse junto con Storybook, luego, crear otra configuración en la empaquetación para el bundle que sería distribuido en npm y, por último, se tendría que tener en cuenta también el purge al implementar la librería en alguna app.
 
 El conjunto de estas problematicos nos hizo decantarnos por las opciones de Tailwind css-in-js probando Twind y Twin.macro.
 
@@ -123,9 +123,9 @@ _Comparación entre Twin.macro y Twind._
 
 **Twin.macro** es una librería que funciona con una [Macro](https://github.com/kentcdodds/babel-plugin-macros) de Babel que permite estilizar componentes css-in-js usando clases de Tailwdin CSS y cuya transformación es hecha en la compilación.
 
-Esta alternativa si bien es interesante para ser implementada en aplicaciones no lo es tanto para librerías. Si se implementa en una librería, como en Lemon System, y luego esta es instalada en una app, como la transformación de Babel es en build time, la estilización con clases de Tailwind CSS que se haga en los componentes no se verían reflejados en la app.
+Esta alternativa si bien es interesante para ser implementada en aplicaciones no lo es tanto para librerías. Si se implementa en una librería, como en Suit UI, y luego esta es instalada en una app, como la transformación de Babel es en build time, la estilización con clases de Tailwind CSS que se haga en los componentes no se verían reflejados en la app.
 
-En **Twind** es diferente, no es necesario una compilación previa y en comparación de otras librerías css-in-js su inyección de CSS es [más optima](https://twind.dev/handbook/introduction.html#benchmarks). Por lo que usar Twind como librería base para Lemon System sería lo más sencillo y optimo, y es por lo cual optamos por utilizarla.
+En **Twind** es diferente, no es necesario una compilación previa y en comparación de otras librerías css-in-js su inyección de CSS es [más optima](https://twind.dev/handbook/introduction.html#benchmarks). Por lo que usar Twind como librería base para Suit UI sería lo más sencillo y optimo, y es por lo cual optamos por utilizarla.
 
 import { Button } from "lemon-system";
 
@@ -186,7 +186,7 @@ Como administrador de librerías se tomaron en cuenta las siguientes:
 - [Yarn](https://yarnpkg.com)
 - [Pnpm](https://pnpm.io/es)
 
-Uno de los principios técnicos por lo que nos guiamos para la contrucción de Lemon System fue la simplicidad, el evitar implementaciónes que no contuviesen mayores beneficios.
+Uno de los principios técnicos por lo que nos guiamos para la contrucción de Suit UI fue la simplicidad, el evitar implementaciónes que no contuviesen mayores beneficios.
 
 Con respecto a Yarn, si bien, solia optarse debido a que era más rapido como administrador de paquetes que npm. Actualmente no hay gran diferencía entre estas, y añadiendo el hecho de que yarn sea externo a Node y no viniese con este instalado como si lo hace npm es por lo cual que lo descartamos como adminstrador de paquetes.
 
