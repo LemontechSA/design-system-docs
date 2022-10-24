@@ -8,8 +8,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Lemon System",
-  tagline: "Design System for lawyers",
+  title: "Suit UI",
+  tagline: "Your interface Library for lawyers",
   url: "https://lemontechsa.github.io",
   baseUrl: "/suit-ui-docs/",
   onBrokenLinks: "throw",
@@ -51,9 +51,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Lemon System",
+        title: "SUIT UI",
         logo: {
-          alt: "Lemon System Logo",
+          alt: "Suit Design Logo",
           src: "img/logo.svg",
         },
         items: [
@@ -118,7 +118,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright ©${new Date().getFullYear()} lemon-system.`,
+        copyright: `Copyright ©${new Date().getFullYear()} suit-ui.`,
       },
       prism: {
         theme: lightCodeTheme,

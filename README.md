@@ -1,4 +1,4 @@
-# Lemon System Docs
+# Suit UI Docs
 
 ### Installation
 

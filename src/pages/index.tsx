@@ -29,7 +29,7 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   return (
-    <Layout description="Lemontech Design System">
+    <Layout description="Suit UI">
       <HomepageHeader />
       <main>
         <div

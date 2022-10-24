@@ -45,9 +45,9 @@ steps:
       username: Drone
       template: >
         {{#success build.status}}
-        ✅ LEMON SYSTEM DOCS *{{ uppercase build.branch }}* BRANCH
+        ✅ SUIT UI DOCS *{{ uppercase build.branch }}* BRANCH
         {{else}}
-        ❌ LEMON SYSTEM DOCS *{{ uppercase build.branch }}* BRANCH
+        ❌ SUIT UI DOCS *{{ uppercase build.branch }}* BRANCH
         {{/success}}
 
         *Type*: {{ build.event }}
