@@ -97,18 +97,21 @@ En Chakra UI, MUI y Mantine la estilización es mediante **Style Props** (estilo
 
 <br />
 
-Este enfoque de crear una librería la cual, aparte de brindar estilos y comportamiento, se pudiese estilizar con Tailwind CSS es novedoso y no teníamos precedentes en los cuales inspirarnos, por lo cual investigamos su factibilidad técnica, probando usar las tres siguientes opciones como librería base de Suit UI:
+Este enfoque de crear una librería la cual, aparte de brindar estilos y comportamiento, se pudiese estilizar con Tailwind CSS es novedoso y no teníamos precedentes en los cuales inspirarnos.
+
+Por lo cual investigamos su factibilidad técnica, probando las tres siguientes opciones como librería base de Suit UI:
 
 - [Tailwind CSS](https://tailwindcss.com)
 - [Twin.macro](https://github.com/ben-rogerson/twin.macro)
 - [Twind](https://twind.dev)
 
-Lo primero que se puede pensar es: ¿por qué no usar simplemente Tailwind CSS en Suit UI? Y, en verdad, sería la opción ideal pero que lastimamente no es algo factible de hacer.
+Lo primero que uno se puede preguntar es: ¿por qué no usar Tailwind CSS en Suit UI? Sería la opción ideal, pero no es algo factible de poder realizarse.
 
-Tailwind CSS en una aplicación de React funciona con los post-procesador de CSS: [Autoprefixer](https://autoprefixer.github.io) y [PurgeCSS](https://purgecss.com), estos en conjunto pueden inyectar CSS a un fichero CSS StyleSheet para estilizar los componentes con clases de Tailwind CSS.
+Tailwind CSS funciona con los post-procesador de CSS: [Autoprefixer](https://autoprefixer.github.io) y [PurgeCSS](https://purgecss.com), estos en conjunto pueden inyectar CSS a un fichero CSS StyleSheet para estilizar los componentes con clases de Tailwind CSS.
 
-La principal complicación técnica que tiene el implementar Tailwind CSS en la librería directamente es que es imperioso para Tailwind inyectar CSS en un CSS StyleSheet y debido a este proceso es que ya no se le podría encargar a Suit UI la responsabilidad de configurar Tailwind CSS, sino que esta es traspasada al que implementa la librería en su aplicación, y lo mismo pasaría con respecto a su configuración, que dependería del framework que esté ocupando (create-react-app, Next.js, Vite, etc...)
-Otro punto a considerar es en el ambiente desarrollo de Suit UI, en este, para que fuese posible desarrollar con Tailwind CSS se tendría que implementar una configuración en la empaquetación del código fuente para poder userse junto con Storybook, luego, crear otra configuración en la empaquetación para el bundle que sería distribuido en npm y, por último, se tendría que tener en cuenta también el purge al implementar la librería en alguna app.
+Debido a lo anterior, es que usando Tailwind CSS no se le podría encargar a Suit UI la responsabilidad de configurar Tailwind CSS, sino que esta es traspasada al que implementa la librería en su aplicación, y lo mismo pasaría con respecto a su configuración, que dependería del framework que esté ocupando (create-react-app, Next.js, Vite, etc...)
+
+Otro punto a considerar es en el ambiente desarrollo de Suit UI. Para que fuese posible desarrollar con Tailwind CSS se tendría que implementar una configuración en la empaquetación del código fuente para poder usarse junto con Storybook, luego, crear otra configuración en la empaquetación para el bundle que sería distribuido en npm y, por último, se tendría que tener en cuenta el purge al implementar la librería en alguna app.
 
 El conjunto de estas problemáticas nos hizo decantarnos por las opciones de Tailwind css-in-js probando Twind y Twin.macro.
 
