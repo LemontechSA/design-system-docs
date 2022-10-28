@@ -206,7 +206,11 @@ Luego de haber probado las diferentes opciones, decidimos usar npm.
 
 ## Repositorio
 
-- Monorepo (turborepo)
-- Monolito
+Para organizar el repositorio se evaluaron dos opciones:
 
-_En contrucción..._
+- Monorepo multipaquete usando _turborepo_ [Repositorio de pruebas](https://github.com/rtelenta/test-monorepo-design-system)
+- Unica librería [Repositorio de pruebas](https://github.com/josiext/react-library-esbuild)
+
+Elegimos tener una _unica librería_ debido a lo simple que es de mantener y al tamaño del proyecto actualmente. Por otro lado si bien un _monorepo multipaquete_ ofrece ventajas a nivel de organización de paquetes y ayuda a evitar problemas entre las dependencias, el setup y el proceso de publicación es complejo.
+
+Por estas razones creemos que un _monorepo multipaquete_ es una buena opción cuando el proyecto es muy grande, debido a lo fácil de su organización. No se descarta optar por esta opción en un futuro.
