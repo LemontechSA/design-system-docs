@@ -45,12 +45,14 @@ steps:
       username: Drone
       template: >
         {{#success build.status}}
-        ✅ SUIT UI DOCS *{{ uppercase build.branch }}* BRANCH
+        ✅ SUIT UI DOCS
         {{else}}
-        ❌ SUIT UI DOCS *{{ uppercase build.branch }}* BRANCH
+        ❌ SUIT UI DOCS
         {{/success}}
 
         *Type*: {{ build.event }}
+
+        *Branch*: {{ build.branch }}
 
         *Author*: {{ build.author }}     
 
