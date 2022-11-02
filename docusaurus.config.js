@@ -9,7 +9,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Suit UI",
-  tagline: "Your interface Library for lawyers",
+  tagline: "A React component Library powered by Tailwind CSS",
   url: "https://lemontechsa.github.io",
   baseUrl: "/suit-ui-docs/",
   onBrokenLinks: "throw",

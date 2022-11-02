@@ -14,17 +14,17 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Easy to Use",
+    title: "Developer Experience",
     Svg: DocosaurusMontain,
     description: <></>,
   },
   {
-    title: "Focus on What Matters",
+    title: "A lot of components",
     Svg: DocosaurusTree,
     description: <></>,
   },
   {
-    title: "Powered by React",
+    title: "Powered by Tailwind CSS",
     Svg: ReactLogo,
     description: <></>,
   },
