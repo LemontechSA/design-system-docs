@@ -1,0 +1,60 @@
+---
+id: Drawer
+title: Drawer
+---
+
+## Import
+
+```js
+import { Drawer } from "suit-ui";
+```
+
+## Usage
+
+import { useState } from "react";
+import { Box, Button, Drawer } from "lemon-system";
+
+export const DrawerExample = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <Box>
+      <Button onClick={() => setIsOpen(true)}>Open drawer</Button>
+      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <Drawer.CloseButton />
+        <Drawer.Brand>Suit UI</Drawer.Brand>
+        <Drawer.Link isExternal href="https://www.google.cl">
+          Go to google
+        </Drawer.Link>
+        <Drawer.Link>Home</Drawer.Link>
+        <Drawer.Link>About us</Drawer.Link>
+        <Drawer.Link>Contact</Drawer.Link>
+      </Drawer>
+    </Box>
+  );
+};
+
+<DrawerExample />
+
+<br />
+
+```jsx
+export const DrawerExample = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <Box>
+      <Button onClick={() => setIsOpen(true)}>Open drawer</Button>
+      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <Drawer.CloseButton />
+        <Drawer.Brand>Lemon System</Drawer.Brand>
+        <Drawer.Link isExternal href="https://www.google.cl">
+          Ir a google
+        </Drawer.Link>
+        <Drawer.Link>Home</Drawer.Link>
+        <Drawer.Link>About us</Drawer.Link>
+        <Drawer.Link>Contact</Drawer.Link>
+      </Drawer>
+    </Box>
+  );
+};
+```
