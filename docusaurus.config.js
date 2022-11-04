@@ -56,20 +56,7 @@ const config = {
           alt: "Suit Design Logo",
           src: "img/logo.svg",
         },
-        items: [
-          {
-            type: "doc",
-            docId: "intro",
-            position: "left",
-            label: "Documentation",
-          },
-          { to: "/blog", label: "Blog", position: "left" },
-          {
-            href: "https://github.com/LemontechSA/design-system",
-            label: "GitHub",
-            position: "right",
-          },
-        ],
+        items: [{ to: "/blog", label: "Blog", position: "left" }],
       },
       footer: {
         style: "dark",
