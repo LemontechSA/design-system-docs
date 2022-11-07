@@ -4,8 +4,6 @@ title: ¡Te damos la bienvenida a nuestro primer newsletter!
 authors: [lia, mariano]
 ---
 
-# ¡Te damos la bienvenida a nuestro primer newsletter!
-
 <!--truncate-->
 
 ![Hi](https://c.tenor.com/XMDzYocSI_8AAAAC/gir-invaderzim.gif)
