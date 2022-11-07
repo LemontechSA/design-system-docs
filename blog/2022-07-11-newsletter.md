@@ -1,5 +1,7 @@
 # ¡Te damos la bienvenida a nuestro primer newsletter!
 
+<!--truncate-->
+
 ## SUIT: El Design System de Lemontech
 
 ### *¿De qué estamos hablando?*
