@@ -1,5 +1,15 @@
+---
+slug: first-newsletter
+title: ¡Te damos la bienvenida a nuestro primer newsletter!
+authors: [lia, mariano]
+---
+
 # ¡Te damos la bienvenida a nuestro primer newsletter!
+
+<!--truncate-->
+
 ![Hi](https://c.tenor.com/XMDzYocSI_8AAAAC/gir-invaderzim.gif)
+
 
 **¡Hola!** Somos el equipo encargado del *Design System* de Lemontech, al que bautizamos **Suit Design** (así es, le hemos puesto **traje**). 
 
