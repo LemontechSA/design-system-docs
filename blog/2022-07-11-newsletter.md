@@ -2,7 +2,7 @@
 
 <!--truncate-->
 
-## SUIT: El Design System de Lemontech
+## SUIT DESIGN: El Design System de Lemontech
 
 ### *¿De qué estamos hablando?*
 
