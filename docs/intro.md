@@ -28,7 +28,7 @@ Import <Code>ThemeProvider</Code> and put it as high as possible in the React ro
 import { ThemeProvider } from "lemon-system";
 ```
 
-In apps that use **React**:
+In apps using **React**:
 
 ```jsx
 // index.js
@@ -41,7 +41,7 @@ ReactDOM.render(
 );
 ```
 
-In case of the app using **Next.js**:
+In case of using **Next.js**:
 
 ```jsx
 // pages/_app.js
@@ -57,7 +57,7 @@ export default function MyApp({ Component, pageProps }) {
 
 ## CSS Baseline
 
-Optionally you can disable CSS Baseline:
+Optionally, you can disable CSS Baseline:
 
 ```jsx
 <ThemeProvider resetCSS={false}>...</ThemeProvider>
