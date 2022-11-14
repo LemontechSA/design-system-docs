@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeProvider } from "lemon-system";
+import { ThemeProvider } from "@suit-ui/react";
 
 interface RootProps {
   children: React.ReactElement;

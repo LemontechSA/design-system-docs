@@ -2,22 +2,22 @@
 sidebar_position: 1
 ---
 
-import { Code } from "lemon-system"
-
 # Get started
+
+import { Code } from "@suit-ui/react"
 
 ## Installation
 
 With npm:
 
 ```bash
-npm install lemon-system@next
+npm install @suit-ui/react@next
 ```
 
 or if you use yarn:
 
 ```bash
-yarn add lemon-system@next
+yarn add @suit-ui/react@next
 ```
 
 ## Provider
@@ -25,7 +25,7 @@ yarn add lemon-system@next
 Import <Code>ThemeProvider</Code> and put it as high as possible in the React root file:
 
 ```jsx
-import { ThemeProvider } from "lemon-system";
+import { ThemeProvider } from "@suit-ui/react";
 ```
 
 In apps using **React**:
