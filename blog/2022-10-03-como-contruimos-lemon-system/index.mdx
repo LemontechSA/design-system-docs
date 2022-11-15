@@ -6,7 +6,7 @@ authors: [jose, renzo]
 
 <!--truncate-->
 
-import { Box } from "lemon-system";
+import { Box } from "@suit-ui/react";
 import UI_LIBRARIES_IMAGE from "./ui-libraries.png";
 import LIBRARY_SUB_CATEGORIES_IMAGE from "./librarie-subcategories.png";
 import CODE_COMPARATION_IMAGE from "./code-comparation.png";
@@ -139,7 +139,7 @@ Esta alternativa, si bien es interesante para ser implementada en aplicaciones, 
 
 En **Twind** es diferente, no es necesario una compilación previa y en comparación de otras librerías css-in-js su inyección de CSS es [más óptima](https://twind.dev/handbook/introduction.html#benchmarks). Por lo que usar Twind como librería base para Suit UI sería lo más sencillo y óptimo, y es por lo cual optamos por utilizarla.
 
-import { Button } from "lemon-system";
+import { Button } from "@suit-ui/react";
 
 <Button className="uppercase p-10" onClick={() => alert("Made with Twind! 😃")}>
   Press me!
@@ -149,7 +149,7 @@ import { Button } from "lemon-system";
 <br />
 
 ```js
-import { Button } from "suit-ui";
+import { Button } from "@suit-ui/react";
 
 <Button className="uppercase p-10">Press me!</Button>;
 ```
