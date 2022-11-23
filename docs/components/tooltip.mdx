@@ -12,10 +12,15 @@ import { Tooltip } from "@suit-ui/react";
 ## Usage
 
 import { Tooltip } from "@suit-ui/react";
+import BrowserOnly from "@docusaurus/BrowserOnly";
 
-<Tooltip label="Lorem ipsum dolor sit..." shouldWrapChildren={true}>
-  Hover me!
-</Tooltip>
+<BrowserOnly>
+  {() => (
+    <Tooltip label="Lorem ipsum dolor sit..." shouldWrapChildren={true}>
+      Hover me!
+    </Tooltip>
+  )}
+</BrowserOnly>
 
 <br />
 <br />
