@@ -11,13 +11,13 @@ import { Code } from "@suit-ui/react"
 With npm:
 
 ```bash
-npm install @suit-ui/react@next
+npm install @suit-ui/react
 ```
 
 or if you use yarn:
 
 ```bash
-yarn add @suit-ui/react@next
+yarn add @suit-ui/react
 ```
 
 ## Provider
