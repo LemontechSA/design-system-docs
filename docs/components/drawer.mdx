@@ -19,7 +19,12 @@ export const DrawerExample = () => {
   return (
     <Box>
       <Button onClick={() => setIsOpen(true)}>Open drawer</Button>
-      <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
+      <Drawer
+        className="z-[99999]"
+        drawerClassName="z-[99999]"
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      >
         <Drawer.CloseButton />
         <Drawer.Brand>Suit UI</Drawer.Brand>
         <Drawer.Link isExternal href="https://www.google.com">
