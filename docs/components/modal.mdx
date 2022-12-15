@@ -1,6 +1,5 @@
 ---
 id: modal
-category: form
 title: Modal
 description:
   Modal component is used to trigger an action or event, such as submitting a
@@ -17,27 +16,6 @@ import { Modal } from "@suit-ui/react";
 ```
 
 ## Usage
-
-export const BasicUsage = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <>
-      <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Modal.Header>Modal Header</Modal.Header>
-        <Modal.Body>Modal Body</Modal.Body>
-        <Modal.Footer>
-          <Button onClick={() => setIsOpen(false)}>Close</Button>
-        </Modal.Footer>
-      </Modal>
-    </>
-  );
-};
-
-<BasicUsage />
-
-<br />
-<br />
 
 ```jsx
 export const BasicUsage = () => {
