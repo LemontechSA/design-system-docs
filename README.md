@@ -2,18 +2,18 @@
 
 ### Installation
 
-```
-$ npm install
+```batch
+npm install
 ```
 
 ### Local Development
 
-```
-$ npm start
+```batch
+npm start
 ```
 
 ### Build
 
-```
-$ npm run build
+```batch
+npm run build
 ```
